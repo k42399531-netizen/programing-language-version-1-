@@ -1,0 +1,317 @@
+/* الاساسيات*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    overflow-x: hidden; /* إلغاء شريط التمرير السفلي */
+}
+
+/* navbarintro*/
+.intro-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 254, 254);
+    padding: 10px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.intro-nav h1{
+    font-size: 2.5rem;
+    font-family: sans-serif;
+    color: #000;
+    font-weight: bold;
+}
+
+.intro-nav h1 u {
+    text-decoration: underline;
+}
+
+.bu1{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.bu1 a{
+   font-size: 1.2rem;
+   font-family: sans-serif;
+   color: #000;
+   text-decoration: none;
+   border: solid gray 3px;
+   border-radius: 6px;
+   padding: 8px 15px;
+   transition: all 0.2s ease;
+}
+
+.bu1 a:hover{
+    color: #fff;
+    background-color: black;
+    border-color: #333;
+    padding: 10px;
+}
+.but a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
+    color: #fff;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    box-shadow: 0 8px 16px rgba(29, 78, 216, 0.22);
+    transition: transform 120ms ease, filter 120ms ease, box-shadow 120ms ease;
+}
+.but a:hover,
+.but a:focus-visible{
+    filter: brightness(1.03);
+}
+.but a:active{
+    transform: translateY(1px);
+    box-shadow: 0 6px 12px rgba(29, 78, 216, 0.24);
+}
+.middle{
+    font-family: 'Arial', sans-serif;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+    text-align: center;
+    border: none;
+    border-radius: 15px;
+    padding: 40px 30px;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    line-height: 1.6;
+}
+
+.middle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s;
+}
+/* تنسيق الأقسام */
+.title{
+    font-family: sans-serif;
+    font-size: 4vh;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.areas .title{
+    margin-bottom: 16px;
+}
+
+.title h1 {
+    color: black;
+}
+
+/* تنسيق الصور */
+.img1, .img2, .areas .img {
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    gap: 24px; /* فروقات واضحة بين الصور */
+}
+
+.img1 img, .img2 img, .areas .img img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: none; /* إزالة الحدود حسب الطلب */
+}
+
+/* فروقات في المسافات بين العناصر بدل الحدود */
+.img1 a, .img2 a, .areas .img a {
+    display: inline-block;
+}
+
+/* إزاحة بسيطة لتمييز المسافات أفقياً على الشاشات الواسعة */
+.img1 a:nth-child(odd), .img2 a:nth-child(odd), .areas .img a:nth-child(odd) {
+    margin-right: 8px;
+}
+.img1 a:nth-child(even), .img2 a:nth-child(even), .areas .img a:nth-child(even) {
+    margin-left: 8px;
+}
+
+/* تدرج في المسافات عمودياً ليظهر الفرق بين كل صورة والتي تليها */
+.img1 a:nth-child(2), .img2 a:nth-child(2), .areas .img a:nth-child(2) { margin-top: 8px; }
+.img1 a:nth-child(3), .img2 a:nth-child(3), .areas .img a:nth-child(3) { margin-top: 16px; }
+
+@media (max-width: 768px) {
+    /* على الموبايل، الترتيب عمودي بالفعل، نبرز الفروقات بمسافات عمودية فقط */
+    .img1 a:nth-child(odd), .img2 a:nth-child(odd), .areas .img a:nth-child(odd),
+    .img1 a:nth-child(even), .img2 a:nth-child(even), .areas .img a:nth-child(even) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .img1 a + a, .img2 a + a, .areas .img a + a {
+        margin-top: 14px; /* مسافة ثابتة بين كل صورة والتي تليها */
+    }
+}
+
+.img1 img:hover, .img2 img:hover, .areas .img img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border: 3px solid #667eea;
+}
+
+/* تعويض إزالة عناصر <br> عبر مسافات في التخطيط */
+.img2{
+    margin-top: 32px;
+}
+
+/* تنسيق الفوتر */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+.icons{
+    display:flex;
+    justify-content: space-between;
+}
+.icons a {
+    font-size: 8vh;
+    color: white;
+    text-decoration: none;
+}
+.icons a:hover {
+    color: #667eea;
+    font-size: 10vh;
+}
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #667eea, transparent);
+    margin: 40px 0;
+}
+br{
+    display: block;
+    content: "";
+    margin: 16px 0; /* مسافة موحدة بدل تكرار <br> */
+}
+br + br{ display: none; }
+br + br + br{ display: none; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .intro-nav{
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 16px;
+    }
+
+    .intro-nav h1{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .bu1{
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .bu1 a{
+        padding: 8px 12px;
+        font-size: 1rem;
+    }
+
+    .title{
+        font-size: 3vh;
+    }
+
+    .img1, .img2, .areas .img{
+        flex-direction: column; /* عرض الصور أسفل بعضها */
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .img1 img, .img2 img, .areas .img img{
+        width: 140px;
+        height: 140px;
+        display: block;
+    }
+
+    .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .icons a{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        font-size: clamp(1.4rem, 6vw, 2rem);
+        color: white;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.08);
+        transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .icons a:hover,
+    .icons a:focus-visible{
+        color: #667eea;
+        background-color: rgba(255, 255, 255, 0.18);
+        transform: scale(1.05);
+        outline: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-nav img{
+        width: 90px;
+        height: auto;
+    }
+
+    .intro-nav h1{
+        font-size: 1.5rem;
+    }
+
+    .middle{
+        padding: 20px 16px;
+        margin: 24px auto;
+        width: 94%;
+    }
+
+    .img1 img, .img2 img, .areas .img img{
+        width: 110px;
+        height: 110px;
+    }
+
+    hr{
+        margin: 24px 0;
+    }
+}

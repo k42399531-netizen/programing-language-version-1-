@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- nav intro-->
+    <nav class="intro-nav">
+        <div class="img">
+            <img src="images/img1.png" alt="Programmers Forum" width="130" data-aos="fade-right">
+        </div>
+        <h1 data-aos="fade-up"><u>Programmers Forum</u></h1>
+        <div class="bu1">
+            <a href="languges.html" data-aos="fade-left"> Programming Languages </a>
+        </div>
+        <div class="but" data-aos="fade-right">
+            <a href="signin.html">Sign in</a>
+        </div>
+    </nav>
+    <!-- middle section-->
+    <section class="middle" data-aos="fade-down">
+        <!-- Element to contain animated typing -->
+        <span id="element"></span>
+        <!-- Load library from the CDN -->
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <!-- Setup and start animation! -->
+        <script>
+           var typed = new Typed('#element', {
+           strings: ['Welcome to the largest forum for programmers around the world', 'where you will find hundreds of programmers and easy answers to your questions' ,'We hope you will benefit and be benefited' , 'Best regards, Cassini Programming Group'],
+           typeSpeed: 50,});
+        </script>
+    </section>
+    <section class="imges">
+        <div class="title">
+            <h1 data-aos="fade-up"> <u> Programming Languages </u></h1>
+        </div>
+            <div class="img">
+              <div class="img1" data-aos="fade-up-right">
+                 <a href="languges.html" target="_blank"><img src="images/js.png" alt="JavaScript logo"></a>
+                 <a href="languges.html" target="_blank"><img src="images/py.jpg" alt="Python logo"></a>
+                 <a href="languges.html" target="_blank"><img src="images/java.jpg" alt="Java logo"></a>
+              </div>
+              <div class="img2" data-aos="fade-up-left">
+                  <a href="languges.html"><img src="images/C.png" alt="C language logo"></a>
+                  <a href="languges.html"><img src="images/go.png" alt="Go language logo"></a>
+                  <a href="languges.html"><img src="images/PHP.png" alt="PHP logo"></a>
+                </div>
+        </div>
+    </section>
+    <hr>
+    <section class="areas">
+        <div class="title">
+          <h1> <u> Programming Areas </u></h1>
+        </div>
+        <div class="img" data-aos="fade-down-right">
+            <a href="pages-language/web.html"><img src="images/web.jpg" alt="websites" ></a>
+            <a href="pages-language/AI.html"><img src="images/ai.jpg" alt="AI"></a>
+            <a href="pages-language/backend.html"><img src="images/pro.jpg" alt="backend programming"></a>
+        </div> 
+    </section>
+    <hr>
+    <!-- nav bar footer-->
+     <nav class="footer">
+        <h1 data-aos="fade-left"> Technical support numbers and our links </h1>
+        <div class="icons" data-aos="fade-right">
+           <a href="https://www.facebook.com/Google" target="_blank" title="our facebook page"><i class="fa-brands fa-facebook"></i></a>
+           <a href="https://twitter.com/Google" target="_blank" title="our instagram page"><i class="fa-brands fa-instagram"></i></a>
+           <a href="https://www.instagram.com/google" target="_blank" title="our twitter page"><i class="fa-brands fa-twitter"></i></a>
+           <a href="https://www.linkedin.com/company/google" target="_blank" title="our linkedin page"><i class="fa-brands fa-linkedin"></i></a>
+           <a href="https://twitter.com/Google" target="_blank" title="our accounts on twitter"> <i class="fa-brands fa-square-x-twitter"></i></a>
+        </div>   
+           <p>Best regards, Cassini Programming Group</p>
+        
+     </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      AOS.init();
+    </script>
+   
+</body>
+</html>

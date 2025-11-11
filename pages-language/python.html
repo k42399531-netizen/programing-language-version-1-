@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- عنوان الصفحة - Programming Languages -->
+    <title>Programming Languages</title>
+    <link rel="stylesheet" href="l-s-pro.css">
+    <!-- مكتبة AOS للحركات والتأثيرات -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- مكتبة Font Awesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- القسم الرئيسي للصفحة -->
+    <section class="main">
+        <!-- شريط التنقل العلوي -->
+        <div class="nav" data-aos="fade-right">
+            <img src="images/img1.png" alt="logo" width="140">
+            <h1><u>Programming Forum</u></h1>
+            <a href="index.html">Home</a>
+        </div>
+        <hr>
+        <!-- المحتوى الرئيسي -->
+        <div class="middle">
+            <h1><u>Python</u></h1>
+            <!-- نص الوصف المتحرك -->
+            <div class="text" data-aos="flip-left">
+               <span id="element"></span>
+               <!-- تحميل مكتبة Typed.js من CDN -->
+              <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+              <!-- إعداد وتشغيل الرسوم المتحركة للنص -->
+               <script>
+                  var typed = new Typed('#element', {
+                  strings: ["Python stands as one of the most prominent programming languages in the modern era, renowned for its remarkable simplicity and power."," Its clean, easy-to-read syntax makes it an ideal choice for both beginners and seasoned professionals. The language supports multiple programming paradigms"," including object-oriented and functional programming. It is widely used across diverse fields such as web development, data analysis, artificial intelligence, and automation.","Thanks to its vast collection of libraries and a vibrant, supportive community, Python remains an essential tool for developers worldwide."],
+                  typeSpeed: 50,});
+                </script>
+            </div>    
+            <!-- قسم العناوين والصور -->
+            <div class="titles">
+               <h2 data-aos="fade-up">The Areas of Python:</h2>
+               <img src="images/py.jpg" alt="python" class="python-img" data-aos="flip-right">
+            </div>
+            <!-- قائمة مجالات استخدام Python -->
+            <ul id="items-1" data-aos="fade-down">
+                <li>Backend Development</li>
+                <li>AI</li>
+                <li>Data Analysis</li>
+                <li>Cyber Security</li>
+                <li>Desktop Apps</li>
+            </ul>
+           <!-- تذييل الصفحة -->
+           <nav class="footer">
+             <h3>The Most Important Sources for Learning the Language:</h3> 
+                <!-- قائمة المصادر التعليمية -->
+                <ul class="items-2" data-aos="flip-up">
+                  <li><a href="https://www.youtube.com/@OctuCode" target="_blank">OctuCode</a></li>
+                  <li><a href="https://elzero.org/study/mastering-python-study-plan/#google_vignette" target="_blank">Elzero</a></li>
+                  <li><a href="https://www.codezilla.courses/introduction-to-programming" target="_blank">Codezilla</a></li>
+                  <li><a href="https://www.youtube.com/channel/UCIKDaj_tCR7ntiwM71DfaBg" target="_blank">Rakwan</a></li>
+                </ul>
+               <!-- Official website -->
+               <div class="footer1">
+                  <img src="images/py.jpg" alt="python-image" class="footer-img" data-aos="fade-right">
+                  <a href="https://www.python.org/" target="_blank" data-aos="fade-left"><p>Official Python Website</p></a>
+               </div> 
+            </nav>     
+        </div>
+        <!-- تحميل وتشغيل مكتبة AOS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </section>
+</body>
+</html>

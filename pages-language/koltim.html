@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- عنوان الصفحة - Programming Languages -->
+    <title>Programming Languages</title>
+    <link rel="stylesheet" href="l-s-pro.css">
+    <!-- مكتبة AOS للحركات والتأثيرات -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- مكتبة Font Awesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- القسم الرئيسي للصفحة -->
+    <section class="main">
+        <!-- شريط التنقل العلوي -->
+        <div class="nav" data-aos="fade-right">
+            <img src="images/img1.png" alt="logo" width="140">
+            <h1><u>Programming Forum</u></h1>
+            <a href="index.html">Home</a>
+        </div>
+        <hr>
+        <!-- المحتوى الرئيسي -->
+        <div class="middle">
+            <h1><u>Kotlin</u></h1>
+            <!-- نص الوصف المتحرك -->
+            <div class="text" data-aos="flip-left">
+               <span id="element"></span>
+               <!-- تحميل مكتبة Typed.js من CDN -->
+              <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+              <!-- إعداد وتشغيل الرسوم المتحركة للنص -->
+               <script>
+                  var typed = new Typed('#element', {
+                  strings: ["Kotlin is a modern, concise programming language that is fully interoperable with Java. "," It is the preferred language for Android development and is also used for server-side, web, and cross-platform applications."],
+                  typeSpeed: 50,});
+                </script>
+            </div>    
+            <!-- قسم العناوين والصور -->
+            <div class="titles">
+               <h2 data-aos="fade-up">The Areas of Kotlin:</h2>
+               <img src="images/koltin.png" alt="Kotlin logo" class="python-img" data-aos="flip-right">
+            </div>
+            <!-- قائمة مجالات استخدام Python -->
+            <ul id="items-1" data-aos="fade-down">
+                <li>Mobile Apps</li>
+                <li>Desktop Apps</li>
+                <li>Backend</li>
+            </ul>
+           <!-- تذييل الصفحة -->
+           <nav class="footer">
+             <h3>The Most Important Sources for Learning the Language:</h3> 
+                <!-- قائمة المصادر التعليمية -->
+                <ul class="items-2" data-aos="flip-up">
+                  <li><a href="https://www.google.com/search?q=%D8%AA%D8%B9%D9%84%D9%85+%D9%84%D8%BA%D8%A9+koitin&oq=%D8%AA%D8%B9%D9%84%D9%85+%D9%84%D8%BA%D8%A9+koitin&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIJCAEQABgNGIAEMgkIAhAAGA0YgAQyCggDEAAYBRgNGB4yCggEEAAYogQYiQUyBwgFEAAY7wUyCggGEAAYgAQYogTSAQkxMzg2OGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:2bd4f977,vid:j1-HJhZRzYo,st:0"> mohamoud</a></li>
+                </ul>
+               <!-- Official website -->
+               <div class="footer1">
+                  <img src="images/koltin.png" alt="Kotlin logo" class="footer-img" data-aos="fade-right" width="200">
+                  <a href="https://kotlinlang.org/" target="_blank" data-aos="fade-left"><p>Official Kotlin Website</p></a>
+               </div> 
+            </nav>     
+        </div>
+        <!-- تحميل وتشغيل مكتبة AOS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </section>
+</body>
+</html>

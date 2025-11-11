@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    overflow-x: hidden; /* إلغاء شريط التمرير السفلي */
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 30px;
+    box-shadow: 0 2px 8px rgba(173, 75, 75, 0.1);
+    margin-bottom: 60px;
+}
+.nav1{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 30px;
+    box-shadow: 0 2px 8px rgba(173, 75, 75, 0.1);
+}
+.img{
+    border-radius: 50%;
+}
+.text h1{
+    text-align: center;
+    color: #000;
+    font-family: sans-serif;
+    font-size: 2.7rem;
+}
+.but a{
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: solid gray 0.25rem;
+    border-radius: 3rem;
+    padding: 1rem;
+}
+/* middle*/
+.middle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap ;
+    width: 70%;
+    margin: 0 auto;
+    gap: 32px;
+    padding: 16px 0;
+}
+
+/* footer*/
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+.icons{
+    display:flex;
+    justify-content: space-between;
+}
+.icons a {
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+}
+.icons a:hover {
+    color: #0d6efd;
+    transform: translateY(-2px) scale(1.05);
+    transition: transform .2s ease, color .2s ease;
+}
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #667eea, transparent);
+    margin: 0 0 40px 0;
+}
+br{
+    display: block;
+    content: "";
+    margin: 16px 0; /* مسافة موحدة بدل تكرار <br> */
+}
+br + br{ display: none; }
+br + br + br{ display: none; }
+/* hovers*/
+.but a:hover{
+    color:black;
+    background-color: green;
+    border-color:aqua;
+    padding:1rem;
+    font-size: 1.8rem;
+    transition: 0.25s ease;
+}
+/* Cards hover */
+.middle .card{
+    border: 0;
+    overflow: hidden;
+    border-radius: 14px;
+    transition: transform .25s ease, box-shadow .25s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    will-change: transform, box-shadow;
+}
+.middle .card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 16px 38px rgba(0,0,0,.16);
+}
+.middle .card .card-img-top{
+    transition: transform .5s ease, filter .35s ease;
+    will-change: transform, filter;
+}
+.middle .card:hover .card-img-top{
+    transform: scale(1.06);
+    filter: saturate(1.1) contrast(1.02);
+}
+.middle .card .card-title{
+    transition: color .25s ease;
+}
+.middle .card:hover .card-title{
+    color: #0d6efd;
+}
+.middle .card .btn{
+    transition: transform .2s ease, box-shadow .25s ease, background-color .25s ease;
+    box-shadow: 0 6px 14px rgba(13,110,253,.25);
+}
+.middle .card:hover .btn{
+    transform: translateY(1px);
+    box-shadow: 0 10px 20px rgba(13,110,253,.35);
+    background-color: #0b5ed7;
+}
+/* Bigger inner padding for cards */
+.middle .card .card-body{
+    padding: 1.5rem;
+}
+/* responsive*/
+/* Images inside cards scale to container */
+.card-img-top{
+    width: 100%;
+    height: auto;
+}
+
+/* Improve flex wrapping and centering */
+.middle{
+    justify-content: center;
+}
+
+/* Tablet */
+@media (max-width: 992px){
+    .navbar{
+        padding: 10px 16px;
+    }
+    .text h1{
+        font-size: 2rem;
+    }
+    .middle{
+        width: 90%;
+        gap: 16px;
+    }
+    .icons a{
+        font-size: 6vh;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px){
+    .navbar{
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    .text h1{
+        font-size: 1.6rem;
+    }
+    .but a{
+        font-size: 1rem;
+        padding: 0.6rem 0.9rem;
+    }
+    .middle{
+        width: 100%;
+        gap: 12px;
+    }
+    /* Make cards full width on small screens even if inline width is set */
+    .middle .card{
+        width: 100% !important;
+    }
+    /* Avoid layout shift on touch devices */
+    .icons a{
+        font-size: 5vh;
+    }
+    .icons a:hover{
+        font-size: 5vh;
+    }
+}
